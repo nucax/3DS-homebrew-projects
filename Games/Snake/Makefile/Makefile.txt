@@ -1,16 +1,12 @@
-# Snake Game for 3DS
+# Snake 3DS - Citro2D version
 TARGET := snake3ds
 BUILD := build
 SOURCE := source
 INCLUDES := include
-DATA := data
-ASSETS := assets
-LIBS := -lctru -lm
-DEPSDIR := $(BUILD)
+LIBS := -lcitro2d -lcitro3d -lctru -lm
 
 ARCH := -march=armv6k -mtune=mpcore -mfloat-abi=hard -mtp=soft
-CFLAGS := -Wall -O2 -mword-relocations \
-	$(ARCH) $(INCLUDE) -DARM11 -D_3DS
+CFLAGS := -Wall -O2 -mword-relocations $(ARCH) $(INCLUDE) -DARM11 -D_3DS
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 
 include $(DEVKITARM)/3ds_rules
