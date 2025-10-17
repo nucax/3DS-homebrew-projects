@@ -1,4 +1,3 @@
-# Snake 3DS - Citro2D version
 TARGET := snake3ds
 BUILD := build
 SOURCE := source
